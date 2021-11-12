@@ -3,42 +3,47 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import AuthProvider from "./contexts/AuthProvider";
 import CycleDetails from "./Pages/CycleDetails/CycleDetails";
 import Explore from "./Pages/Explore/Explore";
 import Home from "./Pages/Home/Home/Home";
-import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
 import LogIn from "./Pages/Shared/LogIn/LogIn";
 function App() {
   return (
     <>
-      <Router>
-        <Header />
-        <Switch>
+      <AuthProvider>
+        <Router>
+          <Header />
+          <Switch>
 
-          <Route exact path="/">
-            <Home />
-          </Route>
+            <Route exact path="/">
+              <Home />
+            </Route>
 
-          <Route path="/home">
-            <Home />
-          </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
 
-          <Route path="/explore">
-            <Explore />
-          </Route>
+            <Route path="/explore">
+              <Explore />
+            </Route>
 
-          <Route path="/details/:id">
-            <CycleDetails />
-          </Route>
+            <Route path="/details/:id">
+              <CycleDetails />
+            </Route>
 
-          <Route path="/login">
-            <LogIn />
-          </Route>
+            <Route path="/login">
+              <LogIn />
+            </Route>
 
-        </Switch>
-        <Footer />
-      </Router>
+            <Route path="*">
+              <LogIn />
+            </Route>
+
+          </Switch>
+        </Router>
+      </AuthProvider>
     </>
   );
 }
