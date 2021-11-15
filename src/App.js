@@ -9,6 +9,7 @@ import Explore from "./Pages/Explore/Explore";
 import Home from "./Pages/Home/Home/Home";
 import Header from "./Pages/Shared/Header/Header";
 import LogIn from "./Pages/Shared/LogIn/LogIn";
+import Register from "./Pages/Shared/LogIn/Register";
 function App() {
   return (
     <>
@@ -35,6 +36,10 @@ function App() {
 
             <Route path="/login">
               <LogIn />
+            </Route>
+
+            <Route path="/register">
+              <Register />
             </Route>
 
             <Route path="*">
