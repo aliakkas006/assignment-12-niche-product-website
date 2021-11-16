@@ -7,6 +7,8 @@ import AuthProvider from "./contexts/AuthProvider";
 import CycleDetails from "./Pages/CycleDetails/CycleDetails";
 import Explore from "./Pages/Explore/Explore";
 import Home from "./Pages/Home/Home/Home";
+import NotFound from "./Pages/NotFound/NotFound";
+import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 import Header from "./Pages/Shared/Header/Header";
 import LogIn from "./Pages/Shared/LogIn/LogIn";
 import Register from "./Pages/Shared/LogIn/Register";
@@ -30,9 +32,9 @@ function App() {
               <Explore />
             </Route>
 
-            <Route path="/details/:id">
+            <PrivateRoute path="/details/:id">
               <CycleDetails />
-            </Route>
+            </PrivateRoute>
 
             <Route path="/login">
               <LogIn />
@@ -43,7 +45,7 @@ function App() {
             </Route>
 
             <Route path="*">
-              <LogIn />
+              <NotFound />
             </Route>
 
           </Switch>

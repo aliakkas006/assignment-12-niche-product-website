@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Container, Row } from 'react-bootstrap';
+import SingleProducts from './SingleProducts';
 
 const Explore = () => {
+    const [allProducts, setAllProducts] = useState([]);
+
+    useEffect(() => {
+        fetch('fakeData.json')
+            .then(res => res.json())
+            .then(data => setAllProducts(data));
+    }, []);
+
     return (
-        <div>
-            This is Explore Pages
-        </div>
+        <Container className="mb-5">
+            <Row xs={1} md={3} className="g-4">
+                {
+                    allProducts.map(pd => <SingleProducts
+                        key={pd.id}
+                        product={pd}
+                    />)
+                }
+            </Row>
+        </Container>
     );
 };
 

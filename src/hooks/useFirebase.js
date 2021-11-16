@@ -28,6 +28,7 @@ const useFirebase = () => {
     // Log in user
     const loginUser = (email, password, location, history) => {
         setIsLoading(true);
+        
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const destination = location?.state?.from || '/';

@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Container, Button } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
-// import useAuth from '../../../hooks/useAuth';
+import { Container, Button, Spinner } from 'react-bootstrap';
+import { NavLink, useLocation, useHistory } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 const LogIn = () => {
     const [logInData, setLogInData] = useState({});
-    // const { user, logInUser, isLoading } = useAuth();
+    const { user, logInUser, isLoading, authError } = useAuth();
+    const location = useLocation();
+    const history = useHistory();
 
     const handleOnChange = e => {
         const field = e.target.name;
@@ -16,6 +18,7 @@ const LogIn = () => {
     }
 
     const handleLogInSubmit = e => {
+        logInUser(logInData.email, logInData.password, location, history);
         e.preventDefault();
     }
 
@@ -28,8 +31,13 @@ const LogIn = () => {
                     <br />
                     <input onChange={handleOnChange} name="password" type="password" placeholder="Password" />
                     <br />
+
                     <Button className="me-3" type="submit" variant="info">Login</Button>
                     <NavLink to="/register">New user? Please Register</NavLink>
+
+                    {isLoading && <Spinner animation="border" variant="warning" />}
+                    {user?.email && <h4 text="success">Login successfully!</h4>}
+                    {authError && <h5 text="danger">{authError}</h5>}
                 </form>
             </div>
         </Container>

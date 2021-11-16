@@ -16,7 +16,7 @@ const Products = () => {
             <Row xs={1} md={3} className="g-4">
                 {
                     products.map(pd => <Product
-                        key={pd.name}
+                        key={pd.id}
                         product={pd}
                     />)
                 }
