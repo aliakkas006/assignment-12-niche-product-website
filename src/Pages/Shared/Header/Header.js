@@ -5,7 +5,7 @@ import useAuth from '../../../hooks/useAuth';
 
 const Header = () => {
     const { user, logout } = useAuth();
-    // console.log(user);
+    
     return (
         <>
             <Navbar bg="dark" variant="dark">
@@ -37,7 +37,12 @@ const Header = () => {
 
                     {
                         user?.email ? (
-                            <Button onClick={logout} variant="warning">Logout</Button>
+                            <>
+                                <Button onClick={logout} variant="warning" className='me-3'>Logout</Button>
+                                <Link to="/dashboard">
+                                    <Button variant="info">Dashboard</Button>
+                                </Link>
+                            </>
                         ) : (
                                 <Link to="/login">
                                     <Button variant="warning">Login</Button>

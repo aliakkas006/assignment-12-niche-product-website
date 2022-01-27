@@ -4,6 +4,7 @@ import {
   Route
 } from "react-router-dom";
 import AuthProvider from "./contexts/AuthProvider";
+import Dashboard from "./Dashboard/Dashboard/Dashboard";
 import CycleDetails from "./Pages/CycleDetails/CycleDetails";
 import Explore from "./Pages/Explore/Explore";
 import Home from "./Pages/Home/Home/Home";
@@ -31,6 +32,10 @@ function App() {
             <Route path="/explore">
               <Explore />
             </Route>
+
+            <PrivateRoute path="/dashboard">
+              <Dashboard />
+            </PrivateRoute>
 
             <PrivateRoute path="/details/:id">
               <CycleDetails />

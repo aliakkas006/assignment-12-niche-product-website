@@ -5,11 +5,11 @@ import useAuth from '../../../hooks/useAuth';
 
 const LogIn = () => {
     const [logInData, setLogInData] = useState({});
-    const { user, logInUser, isLoading, authError } = useAuth();
+    const { user, loginUser, isLoading, authError } = useAuth();
     const location = useLocation();
     const history = useHistory();
 
-    const handleOnChange = e => {
+    const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
         const newLoginData = { ...logInData };
@@ -18,7 +18,7 @@ const LogIn = () => {
     }
 
     const handleLogInSubmit = e => {
-        logInUser(logInData.email, logInData.password, location, history);
+        loginUser(logInData.email, logInData.password, location, history);
         e.preventDefault();
     }
 
@@ -27,9 +27,9 @@ const LogIn = () => {
             <h4>Please Log in</h4>
             <div>
                 <form onSubmit={handleLogInSubmit}>
-                    <input onChange={handleOnChange} name="email" type="text" placeholder="Enter your email" />
+                    <input onBlur={handleOnBlur} name="email" type="text" placeholder="Enter your email" />
                     <br />
-                    <input onChange={handleOnChange} name="password" type="password" placeholder="Password" />
+                    <input onBlur={handleOnBlur} name="password" type="password" placeholder="Password" />
                     <br />
 
                     <Button className="me-3" type="submit" variant="info">Login</Button>
