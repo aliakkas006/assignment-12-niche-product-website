@@ -1,3 +1,13 @@
+# Bi Cycle Shop
+## Live site link:
+
+# About this website:
+1. In this website React js used in client side
+2. Node js and Express js used in server side
+3. For storing json data used MongoDB NoSQL database
+4. For UI used Bootstrap as CSS framework.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

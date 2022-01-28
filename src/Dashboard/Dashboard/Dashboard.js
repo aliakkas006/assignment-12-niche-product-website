@@ -24,29 +24,35 @@ const Dashboard = () => {
                             admin ? (
                                 <>
                                     <Link to={`${url}/manageAllOrder`}>
-                                        <h3>Manage AllOrder</h3>
+                                        Manage AllOrder 
                                     </Link>
+                                    <br />
                                     <Link to={`${url}/addProduct`}>
-                                        <h3>Add Product</h3>
+                                        Add Product    
                                     </Link>
+                                    <br />
                                     <Link to={`${url}/makeAdmin`}>
-                                        <h3>Make Admin</h3>
+                                        Make Admin     
                                     </Link>
+                                    <br />
                                     <Link to={`${url}/manageProducts`}>
-                                        <h3>Manage Products</h3>
+                                        Manage Products     
                                     </Link>
                                 </>
                             ) : (
                                     <>
                                         <Link to={`${url}/pay`}>
-                                            <h3>Pay</h3>
+                                            Pay
                                         </Link>
+                                        <br />
                                         <Link to={`${url}/myOrder`}>
-                                            <h3>My Order</h3>
+                                            My Order
                                         </Link>
+                                        <br />
                                         <Link to={`${url}/review`}>
-                                            <h3>Review</h3>
+                                            Review
                                         </Link>
+                                        <br />
                                     </>
                             )
                         }

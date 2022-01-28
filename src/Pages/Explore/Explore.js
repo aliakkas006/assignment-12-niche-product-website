@@ -6,17 +6,18 @@ const Explore = () => {
     const [allProducts, setAllProducts] = useState([]);
 
     useEffect(() => {
-        fetch('fakeData.json')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setAllProducts(data));
     }, []);
+
 
     return (
         <Container className="mb-5">
             <Row xs={1} md={3} className="g-4">
                 {
                     allProducts.map(pd => <SingleProducts
-                        key={pd.id}
+                        key={pd._id}
                         product={pd}
                     />)
                 }

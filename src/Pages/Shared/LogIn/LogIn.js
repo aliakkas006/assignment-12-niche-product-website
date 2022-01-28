@@ -29,7 +29,7 @@ const LogIn = () => {
                 <form onSubmit={handleLogInSubmit}>
                     <input onBlur={handleOnBlur} name="email" type="text" placeholder="Enter your email" />
                     <br />
-                    <input onBlur={handleOnBlur} name="password" type="password" placeholder="Password" />
+                    <input onBlur={handleOnBlur} name="password" type="password" placeholder="Password" className='my-2' />
                     <br />
 
                     <Button className="me-3" type="submit" variant="info">Login</Button>

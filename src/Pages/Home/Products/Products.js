@@ -6,9 +6,9 @@ const Products = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('fakeData.json')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
-            .then(data => setProducts(data));
+            .then(data => setProducts(data.slice(0, 6)));
     }, []);
 
     return (
@@ -16,7 +16,7 @@ const Products = () => {
             <Row xs={1} md={3} className="g-4">
                 {
                     products.map(pd => <Product
-                        key={pd.id}
+                        key={pd._id}
                         product={pd}
                     />)
                 }
