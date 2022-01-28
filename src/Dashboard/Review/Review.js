@@ -10,7 +10,7 @@ const Review = () => {
     const handleReviewSubmit = e => {
         const productReview = { review };
 
-        fetch('http://localhost:5000/review', {
+        fetch('http://safe-mesa-82734.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

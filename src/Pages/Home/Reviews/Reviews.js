@@ -7,7 +7,7 @@ const Reviews = () => {
     const [reviews, setReview] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('http://safe-mesa-82734.herokuapp.com/review')
             .then(res => res.json())
             .then(data => setReview(data));
     }, []);
