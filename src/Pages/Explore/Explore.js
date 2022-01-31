@@ -6,11 +6,12 @@ const Explore = () => {
     const [allProducts, setAllProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://safe-mesa-82734.herokuapp.com/products')
+        fetch('https://safe-mesa-82734.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setAllProducts(data));
     }, []);
 
+    // console.log(allProducts);
 
     return (
         <Container className="mb-5">
