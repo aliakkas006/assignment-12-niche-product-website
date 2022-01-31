@@ -1,30 +1,45 @@
-[debug] [2022-01-31T12:14:24.449Z] ----------------------------------------------------------------------
-[debug] [2022-01-31T12:14:24.453Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
-[debug] [2022-01-31T12:14:24.454Z] CLI Version:   10.1.2
-[debug] [2022-01-31T12:14:24.454Z] Platform:      win32
-[debug] [2022-01-31T12:14:24.454Z] Node Version:  v14.17.1
-[debug] [2022-01-31T12:14:24.456Z] Time:          Mon Jan 31 2022 18:14:24 GMT+0600 (Bangladesh Standard Time)
-[debug] [2022-01-31T12:14:24.456Z] ----------------------------------------------------------------------
+[debug] [2022-01-31T12:17:58.846Z] ----------------------------------------------------------------------
+[debug] [2022-01-31T12:17:58.853Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-01-31T12:17:58.855Z] CLI Version:   10.1.2
+[debug] [2022-01-31T12:17:58.855Z] Platform:      win32
+[debug] [2022-01-31T12:17:58.855Z] Node Version:  v14.17.1
+[debug] [2022-01-31T12:17:58.857Z] Time:          Mon Jan 31 2022 18:17:58 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-01-31T12:17:58.857Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2022-01-31T12:14:24.548Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2022-01-31T12:14:24.548Z] > authorizing via signed-in user (aliakkas006@gmail.com)
-[debug] [2022-01-31T12:14:24.548Z] [iam] checking project online-bi-cycle-shop for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2022-01-31T12:14:24.551Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2022-01-31T12:14:24.551Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2022-01-31T12:14:24.617Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+[debug] [2022-01-31T12:17:58.955Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-01-31T12:17:58.955Z] > authorizing via signed-in user (aliakkas006@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
 
-For CI servers and headless environments, generate a new token with firebase login:ci
-[debug] [2022-01-31T12:14:24.621Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/online-bi-cycle-shop [none]
-[debug] [2022-01-31T12:14:24.636Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/online-bi-cycle-shop
-[debug] [2022-01-31T12:14:24.645Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/online-bi-cycle-shop
+You're about to initialize a Firebase project in this directory:
+
+  C:\Projects\assignment-12
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-01-31T12:18:15.444Z] Using project from CLI flag: online-bi-cycle-shop
+[debug] [2022-01-31T12:18:15.449Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/online-bi-cycle-shop [none]
+[debug] [2022-01-31T12:18:15.489Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/online-bi-cycle-shop
+[debug] [2022-01-31T12:18:15.523Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/online-bi-cycle-shop
     at Client.doRequest (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:213:19)
     at processTicksAndRejections (internal/process/task_queues.js:95:5)
     at async Client.request (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
     at async getFirebaseProject (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
-    at async getDefaultHostingSite (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\getDefaultHostingSite.js:8:21)
-    at async requireHostingSite (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireHostingSite.js:9:18)
-    at async Object.fn (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\deploy.js:73:9)
-    at async C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:188:17
+    at async Object.doSetup [as project] (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:85:27)
+    at async init (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:19:9)
 [error] 
 [error] Error: Failed to get Firebase project online-bi-cycle-shop. Please make sure the project exists and your account has permission to access it.
