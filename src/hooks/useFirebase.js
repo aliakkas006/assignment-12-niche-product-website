@@ -55,7 +55,7 @@ const useFirebase = () => {
             setIsLoading(false);
         });
         return () => unsubscribed;
-    }, []);
+    }, [auth]);
 
     // handle admin user:
     useEffect(() => {
