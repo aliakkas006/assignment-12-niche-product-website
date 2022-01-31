@@ -59,7 +59,7 @@ const useFirebase = () => {
 
     // handle admin user:
     useEffect(() => {
-        fetch(`http://safe-mesa-82734.herokuapp.com/users/${user.email}`)
+        fetch(`https://safe-mesa-82734.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin));
     }, [user.email]);
@@ -79,7 +79,7 @@ const useFirebase = () => {
     const saveUser = (email, displayName) => {
         const user = { email, displayName };
 
-        fetch('http://safe-mesa-82734.herokuapp.com/users', {
+        fetch('https://safe-mesa-82734.herokuapp.com/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

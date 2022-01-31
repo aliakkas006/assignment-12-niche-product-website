@@ -10,7 +10,7 @@ const MyOrder = () => {
     const { user } = useAuth();
 
     useEffect(() => {
-        fetch('http://safe-mesa-82734.herokuapp.com/orders')
+        fetch('https://safe-mesa-82734.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setMyOrder(data));
     }, [isDeleted]);
@@ -19,7 +19,7 @@ const MyOrder = () => {
 
     // delete any order:
     const handleDeleteOrder = (id) => {
-        fetch(`http://safe-mesa-82734.herokuapp.com/orders/${id}`, {
+        fetch(`https://safe-mesa-82734.herokuapp.com/orders/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

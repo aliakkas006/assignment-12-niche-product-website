@@ -12,7 +12,7 @@ const CycleDetails = () => {
     const { user } = useAuth();
 
     useEffect(() => {
-        fetch('http://safe-mesa-82734.herokuapp.com/products')
+        fetch('https://safe-mesa-82734.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setDetails(data));
     }, []);
@@ -23,7 +23,7 @@ const CycleDetails = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        fetch('http://safe-mesa-82734.herokuapp.com/orders', {
+        fetch('https://safe-mesa-82734.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

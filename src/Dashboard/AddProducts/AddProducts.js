@@ -14,7 +14,7 @@ const AddProducts = () => {
     }
 
     const handleProductSubmit = e => {
-        fetch('http://safe-mesa-82734.herokuapp.com/products', {
+        fetch('https://safe-mesa-82734.herokuapp.com/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
